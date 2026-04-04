@@ -1804,6 +1804,67 @@ body.dark-mode .testimonial-card .student-info {
         width: 100%;
         justify-content: center;
     }
+
+    /* === COMPACT HORIZONTAL RESULT CARDS ON MOBILE === */
+    .mht-cet-grid,
+    .jee-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    .result-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.85rem;
+        padding: 0.75rem 1rem;
+        border-radius: 12px;
+        text-align: left;
+    }
+
+    .student-avatar {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .student-info-res h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .result-card .score {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .result-card .sub-score {
+        font-size: 0.75rem;
+    }
+
+    .result-card .medal {
+        position: static;
+        font-size: 1.2rem;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .category-title {
+        font-size: 1.2rem;
+    }
+
+    .result-category {
+        padding: 1.5rem 1rem;
+    }
+
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
