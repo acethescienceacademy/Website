@@ -1636,6 +1636,41 @@ body.dark-mode .testimonial-card .student-info {
         z-index: 10;
     }
 
+    /* Fixed overlapping issue in navbar */
+    .logo {
+        flex-shrink: 1;
+        margin-right: 0.5rem;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+        line-height: 1.2;
+        white-space: normal;
+    }
+
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav-actions {
+        gap: 0.5rem;
+    }
+
+    .toggle-track {
+        width: 46px;
+        height: 26px;
+    }
+
+    .toggle-thumb {
+        width: 20px;
+        height: 20px;
+    }
+
+    body.dark-mode .toggle-thumb {
+        transform: translateX(20px);
+    }
+
     .mobile-menu-btn.active span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
@@ -1760,6 +1795,10 @@ body.dark-mode .testimonial-card .student-info {
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 1.85rem;
+    }
+
+    .logo-text {
+        font-size: 0.75rem;
     }
 
     .stat-item {
