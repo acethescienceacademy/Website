@@ -1054,12 +1054,20 @@ body.dark-mode .testimonial-card .student-info {
 
 .faculty-slider-container::before {
     left: 0;
-    background: linear-gradient(to right, var(--pure-white), transparent);
+    background: linear-gradient(to right, var(--pure-white), rgba(255, 255, 255, 0));
 }
 
 .faculty-slider-container::after {
     right: 0;
-    background: linear-gradient(to left, var(--pure-white), transparent);
+    background: linear-gradient(to left, var(--pure-white), rgba(255, 255, 255, 0));
+}
+
+body.dark-mode .faculty-slider-container::before {
+    background: linear-gradient(to right, var(--pure-white), rgba(15, 23, 42, 0));
+}
+
+body.dark-mode .faculty-slider-container::after {
+    background: linear-gradient(to left, var(--pure-white), rgba(15, 23, 42, 0));
 }
 
 .faculty-slider-track {
