@@ -9,6 +9,7 @@
     --bg-light: #F9FAFB;
     --border-color: #E5E7EB;
     --pure-white: #FFFFFF;
+    --pure-white-transparent: rgba(255, 255, 255, 0);
     --gradient-main: linear-gradient(135deg, #0A66F9, #06B6D4);
     --gradient-warm: linear-gradient(135deg, #7C3AED, #0A66F9);
     --font-heading: 'Outfit', sans-serif;
@@ -314,6 +315,7 @@ body.dark-mode {
     --bg-light: #0F172A;
     --border-color: #1E293B;
     --pure-white: #0B1120;
+    --pure-white-transparent: rgba(11, 17, 32, 0);
     background-color: #0B1120;
     color: #E2E8F0;
 }
@@ -408,10 +410,10 @@ body.dark-mode .faculty-card {
 body.dark-mode .faculty-card h4 { color: #F1F5F9; }
 
 body.dark-mode .faculty-slider-container::before {
-    background: linear-gradient(to right, var(--pure-white), transparent);
+    background: linear-gradient(to right, var(--pure-white), var(--pure-white-transparent));
 }
 body.dark-mode .faculty-slider-container::after {
-    background: linear-gradient(to left, var(--pure-white), transparent);
+    background: linear-gradient(to left, var(--pure-white), var(--pure-white-transparent));
 }
 
 body.dark-mode .student-info strong { color: #F1F5F9; }
@@ -1054,20 +1056,12 @@ body.dark-mode .testimonial-card .student-info {
 
 .faculty-slider-container::before {
     left: 0;
-    background: linear-gradient(to right, var(--pure-white), rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, var(--pure-white), var(--pure-white-transparent));
 }
 
 .faculty-slider-container::after {
     right: 0;
-    background: linear-gradient(to left, var(--pure-white), rgba(255, 255, 255, 0));
-}
-
-body.dark-mode .faculty-slider-container::before {
-    background: linear-gradient(to right, var(--pure-white), rgba(15, 23, 42, 0));
-}
-
-body.dark-mode .faculty-slider-container::after {
-    background: linear-gradient(to left, var(--pure-white), rgba(15, 23, 42, 0));
+    background: linear-gradient(to left, var(--pure-white), var(--pure-white-transparent));
 }
 
 .faculty-slider-track {
@@ -1688,6 +1682,12 @@ body.dark-mode .faculty-slider-container::after {
     .mobile-menu-btn.active span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
+
+    /* Remove gradient fade overlays on mobile - they render as dark lines */
+    .faculty-slider-container::before,
+    .faculty-slider-container::after {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1780,6 +1780,11 @@ body.dark-mode .faculty-slider-container::after {
 
     .faculty-card h4 {
         font-size: 1.15rem;
+    }
+
+    .faculty-slider-container::before,
+    .faculty-slider-container::after {
+        display: none;
     }
 
     .cta-content h2 {
