@@ -1581,9 +1581,7 @@ body.dark-mode .testimonial-card .student-info {
     .why-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media (max-width: 768px) {
     .nav-inner {
         padding: 0.55rem 1rem;
         position: relative;
@@ -1682,6 +1680,9 @@ body.dark-mode .testimonial-card .student-info {
     .mobile-menu-btn.active span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
+}
+
+@media (max-width: 768px) {
 
     .hero {
         padding: 6rem 5% 7rem;
